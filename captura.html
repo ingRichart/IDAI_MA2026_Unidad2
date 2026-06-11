@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifica Captura</title>
     <base target="principal">
-    <!-- <link rel="stylesheet" href="captura.css"> -->
+    <link rel="stylesheet" href="captura.css">
     <script>
     function setvalue(campo, list) {
         document.forms[0].elements[campo].value = list.value;
     }
     </script>
+
+    <style>
+      #apellido_paterno{
+       width: 200px; 
+       height: 200px;
+
+       background-color: #0a95b8;
+      }
+
+      div{
+        width: 100px;
+        height: 100px;
+
+        background-color: red;
+        color: yellow;
+
+      }
+
+      .carrera {
+        background-color: hsl(108, 74%, 27%);
+      }
+
+    </style>
 </head>
 <body>
   <!-- <p>
@@ -23,22 +46,22 @@
 
   <form>
 
-    <div class="campo">
+    <div id="apellido_paterno">
       <label for="appat">Apellido Paterno:</label>
       <input type="text" id="appat" name="appat" maxlength="30">
     </div>
 
-    <div class="campo">
+    <div>
       <label for="apmat">Apellido Materno:</label>
       <input type="text" id="apmat" name="apmat" maxlength="30" >
     </div>
 
-    <div class="campo">
+    <div>
       <label for="nombre">Nombre del Alumno:</label>
       <input type="text" id="nombre" name="nombre" maxlength="30">
     </div>
 
-    <div class="campo">
+    <div class="carrera">
       <label for="idcar">Carrera:</label>
       <input type="text" id="idcar" name="idcar" maxlength="6" value="72">
       <select name="opc" onchange="setvalue('idcar',this)">
@@ -204,7 +227,7 @@
       </select>
     </div>
 
-    <div class="campo">
+    <div class="carrera">
       <label for="empresa">Empresa:</label>
       <input type="text" id="empresa" name="empresa" maxlength="200" value="X">
     </div>
