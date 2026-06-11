@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica Captura</title>
+    <base target="principal">
+    <!-- <link rel="stylesheet" href="captura.css"> -->
+    <script>
+    function setvalue(campo, list) {
+        document.forms[0].elements[campo].value = list.value;
+    }
+    </script>
+</head>
+<body>
+  <!-- <p>
+    <a href="menus.asp" target="_top">Menu Principal</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="gen_busca.asp?tabla_menu=GEN_ALUMNOS" target="_top">Busqueda</a>
+  </p> -->
+
+  <p class="titulo">Modificacion de Alumnos</p>
+
+  <form>
+
+    <div class="campo">
+      <label for="appat">Apellido Paterno:</label>
+      <input type="text" id="appat" name="appat" maxlength="30">
+    </div>
+
+    <div class="campo">
+      <label for="apmat">Apellido Materno:</label>
+      <input type="text" id="apmat" name="apmat" maxlength="30" >
+    </div>
+
+    <div class="campo">
+      <label for="nombre">Nombre del Alumno:</label>
+      <input type="text" id="nombre" name="nombre" maxlength="30">
+    </div>
+
+    <div class="campo">
+      <label for="idcar">Carrera:</label>
+      <input type="text" id="idcar" name="idcar" maxlength="6" value="72">
+      <select name="opc" onchange="setvalue('idcar',this)">
+        <option value="99999">Alumno con plan anterior Verifique en catalogo de carreras</option>
+        <option value="133">BACHILLERATO GENERAL (1990)</option>
+        <option value="132">CIENCIAS FISICO-QUIMICO-MATEMATICAS (20)</option>
+        <option value="20">CIENCIAS SOCIALES</option>
+        <option value="67">CONTADOR PÚBLICO Y AUDITOR (2010)</option>
+        <option value="2">CONTADOR PÚBLICO Y AUDITOR 84</option>
+        <option value="58">CURSOS DE INGLES</option>
+        <option value="140">DIPLOMADO DE LEAN SIX SIGMA</option>
+        <option value="89">DIPLOMADO EN ADMINISTRACION DE PROYECTOS</option>
+        <option value="78">DIPLOMADO EN AUTOMATIZACIÓN Y ROBÓTICA</option>
+        <option value="36">DIPLOMADO EN CALIDAD</option>
+        <option value="34">DIPLOMADO EN CONECTIVIDAD</option>
+        <option value="131">DIPLOMADO EN DESARROLLO DE MOVILES</option>
+        <option value="59">DIPLOMADO EN INGENIERIA DE SOFTWARE</option>
+        <option value="93">DIPLOMADO EN SAP</option>
+        <option value="35">DIPLOMADO JURIDICO</option>
+        <option value="109">DIPLOMADOS DE SALUD</option>
+        <option value="110">DIPLOMADOS EN ADMINISTRACION</option>
+        <option value="111">DIPLOMADOS EN PSICOLOGIA</option>
+        <option value="75">ING. TECNOL DE INFORM ACENT. COMUNICIONES 2010</option>
+        <option value="74">ING. TECNOL DE INFORM ACENT. DES DE SOFTWARE 2010</option>
+        <option value="63">INGENIERO EN TECNOLOGÍAS ELECTRÓNICAS 2010</option>
+        <option value="64">INGENIERO INDUSTRIAL ADMINISTRADOR 2010</option>
+        <option value="77">INGENIERO INDUSTRIAL Y DE SISTEMAS 2007</option>
+        <option value="65">INGENIERO MECÁNICO ADMINISTRADOR 2010</option>
+        <option value="66">INGENIERO MECÁNICO ELECTRICISTA 2010</option>
+        <option value="3">LIC. EN ADMINISTRACION DE EMPRESAS 84</option>
+        <option value="76">LIC. EN ADMINISTRACION DE TECNOLOGIAS DE INFORMACION 2010</option>
+        <option value="83">LIC. EN CIENCIAS DE LA COMUNICACION EN LA MERCADOTECNIA</option>
+        <option value="24">LIC. EN INFORMATICA ADMINISTRATIVA 1989</option>
+        <option value="68">LICENCIADO EN ADMINISTRACIÓN DE EMPRESAS (2010)</option>
+        <option value="71">LICENCIADO EN ADMINISTRACIÓN FINANCIERA (2010)</option>
+        <option value="72" selected>LICENCIADO EN BANCA Y FINANZAS (2010)</option>
+        <option value="73">LICENCIADO EN CIENCIAS JURÍDICAS (2011)</option>
+        <option value="69">LICENCIADO EN MERCADOTECNIA (2010)</option>
+        <option value="80">LICENCIADO EN PSICOLOGÍA 2010</option>
+        <option value="70">LICENCIADO EN RELACIONES INDUSTRIALES(2010)</option>
+        <option value="115">MAESTRIA EN ADMINISTRACION DE LA CALIDAD TOTAL 2017</option>
+        <option value="113">MAESTRIA EN ADMINISTRACION DE NEGOCIOS</option>
+        <option value="27">MAESTRÍA EN ADMINISTRACIÓN DE NEGOCIOS</option>
+        <option value="82">MAESTRÍA EN ADMINISTRACIÓN DE SERVICIOS DE SALUD</option>
+        <option value="32">MAESTRIA EN CALIDAD TOTAL 1994</option>
+        <option value="116">MAESTRIA EN EDUCACION UNIVERSITARIA</option>
+        <option value="1080">MODULAR LICENCIADO EN PSICOLOGIA</option>
+        <option value="1097">NO ESC. CONTADOR PÚBLICO Y AUDITOR (2015)</option>
+        <option value="1104">NO ESC. ING. TECNOL. DE INFORM. ACENT. DES SOFT</option>
+        <option value="1105">NO ESC. ING. TECNOL. DE INFORM. ACENT. EN COMUNIC. 2015</option>
+        <option value="1093">NO ESC. INGENIERO EN TECNOLOGÍAS ELECTRÓNICAS 2014</option>
+        <option value="1094">NO ESC. INGENIERO INDUSTRIAL ADMINISTRADOR 2012</option>
+        <option value="1107">NO ESC. INGENIERO INDUSTRIAL Y DE SISTEMAS 2014</option>
+        <option value="1095">NO ESC. INGENIERO MECÁNICO ADMINISTRADOR 2016</option>
+        <option value="1096">NO ESC. INGENIERO MECÁNICO ELECTRICISTA 2014</option>
+        <option value="1106">NO ESC. LIC. EN ADMON. DE TECNOL. DE INF. 2015</option>
+        <option value="1098">NO ESC. LICENCIADO EN ADMINISTRACIÓN DE EMPRESAS (2015)</option>
+        <option value="1101">NO ESC. LICENCIADO EN ADMINISTRACIÓN FINANCIERA</option>
+        <option value="1102">NO ESC. LICENCIADO EN BANCA Y FINANZAS</option>
+        <option value="1103">NO ESC. LICENCIADO EN CIENCIAS JURÍDICAS</option>
+        <option value="1099">NO ESC. LICENCIADO EN MERCADOTECNIA</option>
+        <option value="1100">NO ESC. LICENCIADO EN RELACIONES INDUSTRIALES</option>
+        <option value="56">PREPARATORIA GENERAL</option>
+        <option value="61">PROFESIONAL ASOCIADO EN CIENCIAS JURIDICAS</option>
+        <option value="62">PROFESIONAL ASOCIADO EN CONTADURÍA PÚBLICA</option>
+      </select>
+    </div>
+
+    <div class="campo">
+        <label for="idsisedu">ID. Sistema Educativo:</label>
+        <input type="radio" name="idsisedu" id="idsisedu" value="1"><span>Tradicional</span>
+        <input type="radio" name="idsisedu" id="idsisedu" value="2"><span>Modular</span>
+        <input type="radio" name="idsisedu" id="idsisedu" value="3"><span>Semipresencial</span>
+
+      <!-- <input type="text" id="idsisedu" name="idsisedu" maxlength="4" value="1">
+      <select name="opc" onchange="setvalue('idsisedu',this)">
+        <option value="2">Sistema Modular</option>
+        <option value="3">Sistema Semipresencial</option>
+        <option value="1" selected>Sistema Tradicional</option>
+      </select> -->
+    </div>
+
+    <div class="campo">
+      <label for="telefonos">Teléfonos:</label>
+      <input type="tel" id="telefonos" name="telefonos">
+    </div>
+
+    <div class="campo">
+      <label for="celulares">Tel. Celulares:</label>
+      <input type="tel" id="celulares" name="celulares">
+    </div>
+
+    <div class="campo">
+      <label for="email">Correo electrónico:</label>
+      <input type="text" id="email" name="email" maxlength="50">
+    </div>
+
+    <div class="campo">
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" maxlength="50">
+    </div>
+
+    <div class="campo">
+      <label for="colonia">Colonia:</label>
+      <input type="text" id="colonia" name="colonia" maxlength="50">
+    </div>
+
+    <div class="campo">
+      <label for="poblacion">Población:</label>
+      <input type="text" id="poblacion" name="poblacion" maxlength="50">
+    </div>
+
+    <div class="campo">
+      <label for="cp">Código Postal:</label>
+      <input type="text" id="cp" name="cp" maxlength="6">
+    </div>
+
+    <div class="campo">
+      <label for="idest">Estado:</label>
+      <input type="text" id="idest" name="idest" maxlength="6" value="1">
+      <select name="opc" onchange="setvalue('idest',this)">
+        <option value="50">Africa</option>
+        <option value="31">Aguascalientes</option>
+        <option value="51">Asia</option>
+        <option value="32">Baja California</option>
+        <option value="33">Baja California Sur</option>
+        <option value="34">Campeche</option>
+        <option value="47">Canada</option>
+        <option value="48">Centro América y el Caribe</option>
+        <option value="8">Chiapas</option>
+        <option value="2">Chihuahua</option>
+        <option value="29">Ciudad de México</option>
+        <option value="4">Coahuila de Zaragoza</option>
+        <option value="15">Colima</option>
+        <option value="35">Durango</option>
+        <option value="46">Estados Unidos</option>
+        <option value="52">Europa</option>
+        <option value="36">Guanajuato</option>
+        <option value="9">Guerrero</option>
+        <option value="13">Hidalgo</option>
+        <option value="37">Jalisco</option>
+        <option value="38">México</option>
+        <option value="39">Michoacán de Ocampo</option>
+        <option value="14">Morelos</option>
+        <option value="54">Nacido en el Extranjero</option>
+        <option value="16">Nayarit</option>
+        <option value="1" selected>Nuevo León</option>
+        <option value="10">Oaxaca</option>
+        <option value="53">Oceanía</option>
+        <option value="40">Puebla</option>
+        <option value="5">Queretaro</option>
+        <option value="6">Quintana Roo</option>
+        <option value="3">San Luis Potosí</option>
+        <option value="41">Sinaloa</option>
+        <option value="42">Sonora</option>
+        <option value="49">Sudamérica</option>
+        <option value="30">TABASCO</option>
+        <option value="43">Tamaulipas</option>
+        <option value="44">Tlaxcala</option>
+        <option value="11">Veracruz</option>
+        <option value="7">Yucatán</option>
+        <option value="45">Zacatecas</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="empresa">Empresa:</label>
+      <input type="text" id="empresa" name="empresa" maxlength="200" value="X">
+    </div>
+
+    <div class="campo">
+      <label for="sexo">Sexo:</label>
+      <input type="radio" name="sexo" id="sexom" value="M"><span>Masculino</span>
+      <input type="radio" name="sexo" id="sexof" value="F"><span>Femenino</span>
+
+      <!-- <input type="text" id="sexo" name="sexo" maxlength="1" value="M">
+      <select name="opc" onchange="setvalue('sexo',this)">
+        <option value="M" selected>M</option>
+        <option value="F">F</option>
+      </select> -->
+    </div>
+
+    <div class="campo">
+      <label for="edociv">Estado Civil:</label>
+      <input type="text" id="edociv" name="edociv" maxlength="1" value="S">
+      <select name="opc" onchange="setvalue('edociv',this)">
+        <option value="S" selected>Soltero</option>
+        <option value="C">Casado</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="idemp"><a href="gen_busca.asp?tabla_menu=gen_empresas&amp;nombre_menu=ID.Empresa" target="_blank">ID.Empresa:</a></label>
+      <input type="text" id="idemp" name="idemp" maxlength="4" value="1">
+      <select name="opc" onchange="setvalue('idemp',this)">
+        <option value="0">ALUMNOS SIN EMPRESA</option>
+        <option value="1" selected>NINGUNO</option>
+        <option value="999999">NO APLICA</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="extemp">Ext.Empresa</label>
+      <input type="text" id="extemp" name="extemp" maxlength="4" value="X">
+    </div>
+
+    <div class="campo">
+      <label for="fecnac">Fecha de Nacimiento:</label>
+      <input type="date" id="fecnac" name="fecnac">
+    </div>
+
+    <div class="campo">
+      <label for="fecing">Fecha de Ingreso:</label>
+      <input type="date" id="fecing" name="fecing">
+    </div>
+
+    <div class="campo">
+      <label for="tetra">Tetramestre:</label>
+      <input type="radio" name="tetra" id="tetra" value="1"><span>1ro</span>
+      <input type="radio" name="tetra" id="tetra" value="2"><span>2do</span>
+      <input type="radio" name="tetra" id="tetra" value="3"><span>3ro</span>
+      <input type="radio" name="tetra" id="tetra" value="4"><span>4to</span>
+      <input type="radio" name="tetra" id="tetra" value="5"><span>5to</span>
+      <input type="radio" name="tetra" id="tetra" value="6"><span>6to</span>
+      <input type="radio" name="tetra" id="tetra" value="7"><span>7mo</span>
+      <input type="radio" name="tetra" id="tetra" value="8"><span>8vo</span>
+      <input type="radio" name="tetra" id="tetra" value="9"><span>9no</span>
+      <input type="radio" name="tetra" id="tetra" value="10"><span>10mo</span>
+    </div>
+
+    <div class="campo">
+      <label for="status">Estatus:</label>
+      <input type="radio" name="status" id="status" value="1"><span>Activo</span>
+      <input type="radio" name="status" id="status" value="0"><span>Inactivo</span>
+    </div>
+
+    <div class="campo">
+      <label for="extranjero">Extranjero:</label>
+      <input type="radio" name="extranjero" id="extranjero" value="1"><span>Si</span>
+      <input type="radio" name="extranjero" id="extranjero" value="0"><span>No</span>
+    </div>
+
+    <div class="campo">
+      <label for="escuelaprocedencia">Escuela de Procedencia</label>
+      <input type="text" id="escuelaprocedencia" name="escuelaprocedencia" maxlength="200" value="Bachillerato Tecnologico Nuestros Pequeños Hermanos">
+      <select name="opc" onchange="setvalue('escuelaprocedencia',this)">
+        <option value="Bachillerato Tecnologico Nuestros Pequeños Hermanos" selected>Bachillerato Tecnologico Nuestros Pequeños Hermanos</option>
+        <option value="Aída Rodríguez Sánchez, Colegio">Aída Rodríguez Sánchez, Colegio</option>
+        <option value="American Institute of Monterrey">American Institute of Monterrey</option>
+        <option value="Cumbres, A.C., Instituto">Cumbres, A.C., Instituto</option>
+        <option value="UNIVERSIDAD AUTÓNOMA DE NUEVO LEON">UNIVERSIDAD AUTÓNOMA DE NUEVO LEON</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="idestprep">Estado donde Estudio Preparatoria</label>
+      <input type="text" id="idestprep" name="idestprep" maxlength="4" value="1">
+      <select name="opc" onchange="setvalue('idestprep',this)">
+        <option value="1" selected>Nuevo León</option>
+        <option value="2">Chihuahua</option>
+        <option value="4">Coahuila de Zaragoza</option>
+        <option value="29">Ciudad de México</option>
+        <option value="46">Estados Unidos</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="curp">CURP</label>
+      <input type="text" id="curp" name="curp" maxlength="50" value="CARI040320HGRNMSA5">
+    </div>
+
+    <p class="boton-centro">
+        <input type="submit" value="Grabar" name="btn_busca">
+        <input type="reset" value="Cancelar" name="btn_busca">
+    </p>
+
+  </form>
+
+</body>
+</html>

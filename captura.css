@@ -1,0 +1,34 @@
+body {
+  background-color: #00FF00;
+}
+
+p.titulo {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.campo label {
+  width: 220px;
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+  margin-right: 8px;
+}
+
+.campo input[type="text"],
+.campo select {
+  font-size: small;
+}
+
+p.boton-centro {
+  text-align: center;
+}
